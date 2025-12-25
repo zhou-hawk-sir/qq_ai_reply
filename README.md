@@ -15,6 +15,7 @@ QQ Auto Chat AI 🤖
 坐标校准工具：提供可视化坐标校准脚本
 
 📁 项目结构
+text
 ├── qq_ocr_live.py      # 主程序：OCR识别 + AI回复
 ├── ai_reply.py         # AI回复逻辑：调用智谱API
 ├── memory.py           # 对话记忆管理
@@ -23,6 +24,7 @@ QQ Auto Chat AI 🤖
 └── requirements.txt    # 依赖包列表
 🚀 快速开始
 1. 环境准备
+bash
 # 克隆项目
 git clone https://github.com/yourusername/qq-auto-chat-ai.git
 cd qq-auto-chat-ai
