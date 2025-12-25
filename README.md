@@ -15,32 +15,36 @@ QQ Auto Chat AI 🤖
 坐标校准工具：提供可视化坐标校准脚本
 
 📁 项目结构
-text
+```text
 ├── qq_ocr_live.py      # 主程序：OCR识别 + AI回复
 ├── ai_reply.py         # AI回复逻辑：调用智谱API
 ├── memory.py           # 对话记忆管理
 ├── get_region.py       # 坐标校准工具
 ├── .env                # API密钥配置（需手动创建）
 └── requirements.txt    # 依赖包列表
+```
 🚀 快速开始
 1. 环境准备
-bash
+```bash
 # 克隆项目
 git clone https://github.com/yourusername/qq-auto-chat-ai.git
 cd qq-auto-chat-ai
 
 # 安装依赖
 pip install -r requirements.txt
+```
 2. API密钥配置
 前往智谱AI开放平台注册账号并获取API密钥
 
 在项目根目录创建.env文件：
 
-env
+```env
 ZHIPU_API_KEY=your_api_key_here
+```
 3. 坐标校准
-bash
+```bash
 python get_region.py
+```
 按照提示依次校准：
 
 聊天记录区域（左上角和右下角）
@@ -54,8 +58,9 @@ python get_region.py
 程序会生成配置代码，复制到qq_ocr_live.py中替换相应变量。
 
 4. 运行机器人
-bash
+```bash
 python qq_ocr_live.py
+```
 ⚙️ 配置说明
 主要参数（qq_ocr_live.py）
 参数	说明	默认值
@@ -120,16 +125,18 @@ A: 可尝试降低OCR识别频率或使用更快的AI模型。
 调整记忆长度
 在ai_reply.py中修改：
 
-python
+```python
 memory = ChatMemory(max_turns=8)  # 改为其他数字
+```
 修改回复频率
 在qq_ocr_live.py中调整：
 
-python
+```python
 AUTO_TALK_INTERVAL = 70  # 主动聊天间隔
 time.sleep(0.5)          # 检测间隔
+```
 📦 依赖包
-txt
+```txt
 pyautogui>=0.9.54
 opencv-python>=4.8.1
 numpy>=1.24.3
@@ -137,6 +144,7 @@ paddleocr>=2.7.0
 zhipuai>=2.0.1
 python-dotenv>=1.0.0
 pyperclip>=1.8.2
+```
 📄 许可证
 本项目仅供学习和娱乐使用，请遵守相关法律法规和平台规定。
 
